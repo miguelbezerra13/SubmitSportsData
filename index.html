@@ -11,55 +11,54 @@
         </header>    
 
         <section>
-            <form action="">
-                <div>
-                    <label>Activity</label>
-                    <select name="activity" id="activity" required>
-                        <option value="Cycling">Cycling</option>
-                        <option value="Running">Running</option>
-                        <option value="Walking">Walking</option>
-                    </select>
-                </div>
+            <div class="container">
+                <form action="">
+                    <div class="field">
+                        <label class="main-label">Please select an activity:</label>
+                        <div id="activity">
+                            <input type="radio" id="cycling" name="activity" value="Cycling">
+                            <label for="cycling">Cycling</label>
+                            <input type="radio" id="running" name="activity" value="Running">
+                            <label for="running">Running</label>
+                            <input type="radio" id="walking" name="activity" value="Walking">
+                            <label for="walking">Walking</label>
+                        </div>
+                    </div>
 
-                <div>
-                    <label>Date</label>
-                    <input type="date" name="date" id="date" required>
-                </div>
+                    <div class="field">
+                        <label class="main-label">Date:</label>
+                        <input type="date" name="date" id="date" required>
+                    </div>
 
-                <div>
-                    <label>Kilometers</label>
-                    <input type="number" name="kilometers" id="kilometers" step="0.01" min="0" required>
-                </div>
+                    <div class="field">
+                        <label class="main-label">Distance (km):</label>
+                        <input type="number" name="kilometers" id="kilometers" step="0.01" min="0" required>
+                    </div>
 
-                <div>
-                    <label>Hours</label>
-                    <input type="number" name="hours" id="hours" min="0" required>
-                </div>
+                    <div class="field">
+                        <label class="main-label">Duration:</label>
+                        <input type="number" name="hours" id="hours" min="0" required>
+                        <label>:</label>
+                        <input type="number" name="minutes" id="minutes" min="0" max="59" required>
+                        <label>:</label>
+                        <input type="number" name="seconds" id="seconds" min="0" max="59" required>
+                    </div>
 
-                <div>
-                    <label>Minutes</label>
-                    <input type="number" name="minutes" id="minutes" min="0" max="59" required>
-                </div>
+                    <div class="field">
+                        <label class="main-label">Calories:</label>
+                        <input type="number" name="calories" id="calories">
+                    </div>
 
-                <div>
-                    <label>Seconds</label>
-                    <input type="number" name="seconds" id="seconds" min="0" max="59" required>
-                </div>
+                    <div class="field">
+                        <label class="main-label">Elevation Gain (m):</label>
+                        <input type="number" name="elevation" id="elevation">
+                    </div>
 
-                <div>
-                    <label>Calories</label>
-                    <input type="number" name="calories" id="calories">
-                </div>
-
-                <div>
-                    <label>Elevation Gain (m)</label>
-                    <input type="number" name="elevation" id="elevation">
-                </div>
-
-                <div>
-                    <input type="submit" name="submit" value="Submit">
-                </div>
-            </form>
+                    <div>
+                        <input type="submit" name="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
         </section>
     </body>
 </html>
