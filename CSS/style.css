@@ -8,12 +8,14 @@ body{
 }
 
 .container{
-    width: 80%;
+    width: 25%;
     margin: auto;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: #505050 groove;
+    border-radius: 12px;
 }
 
 /* Header */
@@ -34,9 +36,17 @@ header h1{
     margin-bottom: 10px;
 }
 
+.field input[type="date"], .field input[type="number"]{
+    font-size: 15px;
+}
+
 .main-label{
     font-weight: bold;
     font-size: 18px;
+}
+
+#select-activity{
+    margin-top: 10px;
 }
 
 #activity{
@@ -47,3 +57,40 @@ header h1{
     font-size: 18px;
 }
 
+#date{
+    width: 17ch;
+}
+
+#distance{
+    width: 8ch;
+}
+
+.time{
+    width: 5ch;
+}
+
+#calories, #elevation{
+    width: 6ch;
+}
+
+/* Button */
+.button-container{
+    width: 30%;
+    margin: auto;
+}
+
+.button{
+    text-transform: uppercase;
+    background-color: #8BD554;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-radius: 12px;
+}
+
+.button:hover{
+    background-color: #00A83A;
+}
