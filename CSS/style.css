@@ -93,4 +93,5 @@ header h1{
 
 .button:hover{
     background-color: #00A83A;
+    cursor: pointer;
 }
