@@ -9,6 +9,8 @@ const seconds = document.querySelector('#seconds');
 const calories = document.querySelector('#calories');
 const elevation = document.querySelector('#elevation');
 
+const message = document.querySelector('.message');
+
 activityForm.addEventListener('submit', onSubmit);
 
 function onSubmit(e) {
@@ -43,8 +45,20 @@ function onSubmit(e) {
         method: 'POST',
         headers: {'Content-Type': 'application/json',},
         body: JSON.stringify(actLog),
+    }).then((response) => {
+        if (response.ok) {}
+        else {
+            throw new Error('Something went wrong');
+        }
     })
-
-    // The only thing missing would be a sign in the web page that the data was correctly sent
+    .then((response) => {
+        alert('The data was submitted successfully.')
+    })
+    .catch((error) => {
+        message.classList.add('container', 'error');
+        message.innerHTML = 'The data was not submitted!';
+        setTimeout(() => message.remove(), 3000);
+        window.setTimeout(function(){location.reload()}, 3000); 
+    });
 
 };

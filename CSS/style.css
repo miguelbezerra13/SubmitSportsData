@@ -16,6 +16,7 @@ body{
     justify-content: center;
     border: #505050 groove;
     border-radius: 12px;
+    margin-bottom: 10px;
 }
 
 /* Header */
@@ -94,4 +95,16 @@ header h1{
 .button:hover{
     background-color: #00A83A;
     cursor: pointer;
+}
+
+/* Message */
+
+.message{
+    padding: 10px 0;
+}
+
+.error{
+    border-color: red;
+    font-size: 20px;
+    font-weight: bold;
 }

@@ -66,7 +66,7 @@ def post_activity_log(activity_log: ActivityLog):
     }
 
     # Create the dataframe and set the index
-    test_df = pd.DataFrame(line).set_index('index')
+    activity_line = pd.DataFrame(line).set_index('index')
 
     # Add the log to the end of the dataset
-    test_df.to_csv('rwc.csv', mode='a', header=False)
+    activity_line.to_csv('rwc.csv', mode='a', header=False)
